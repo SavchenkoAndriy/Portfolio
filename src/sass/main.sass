@@ -1,0 +1,131 @@
+@import 'font'
+
+*
+  margin: 0
+  padding: 0
+  border: 0
+
+body
+  width: 100%
+  height: auto
+  background-color: black
+  color: #0aff13
+  overflow: hidden
+  font: 15px DN
+  text-shadow: 0 0 15px #0aff13
+  cursor: default
+
+.mobile
+  width: 0
+  height: 0
+  display: none
+
+@media only screen  and (max-width: 600px)
+  .desktop
+    *
+      width: 0
+      height: 0
+      display: none
+
+@media only screen  and (max-width: 600px)
+  .mobile
+    width: 100vw
+    height: 100vh
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    font-size: 7vh
+    animation: pulseTextGreenMob 2s infinite
+    &__wrap
+      display: grid
+      grid-template-rows: repeat(4,1fr)
+
+canvas
+  position: fixed
+  z-index: -1
+  width: 100vw
+  height: 100vh
+
+button
+  background-color: rgba(0,0,0,0)
+  animation: pulseGreen 3s infinite
+  outline: none
+  text-shadow: 0 0 15px #0aff13
+
+button:hover
+  background-color: rgba(#0aff13,0.5)
+  color: white
+
+.button_hover_green:hover
+  background-color: rgba(#0aff13,0.5)
+  color: white
+
+.button_hover_red:hover
+  background-color: rgba(red,0.5)
+  color: white
+
+.button_hover_blue:hover
+  background-color: rgba(blue,0.5)
+  color: white
+
+
+
+@-webkit-keyframes pulseGreen
+  0%
+    box-shadow: 0 0 0 0 rgba(#24ff54,1)
+
+  100%
+    box-shadow: 0 0 2px 2px rgba(#24ff54,0)
+
+@-webkit-keyframes pulseRed
+  0%
+    box-shadow: 0 0 0 0 rgba(red,1)
+
+  100%
+    box-shadow: 0 0 2px 2px rgba(red,0)
+
+@-webkit-keyframes pulseBlue
+  0%
+    box-shadow: 0 0 0 0 rgba(blue,1)
+
+  100%
+    box-shadow: 0 0 2px 2px rgba(blue,0)
+
+@-webkit-keyframes pulseTextGreen
+  0%
+    text-shadow: 0 0 25px rgba(#24ff54,1), 0 0 5px rgba(white,0)
+  50%
+    text-shadow: 0 0 25px rgba(#24ff54,0), 0 0 5px rgba(white,1)
+  100%
+    text-shadow: 0 0 25px rgba(#24ff54,1), 0 0 5px rgba(white,0)
+
+@-webkit-keyframes pulseTextRed
+  0%
+    text-shadow: 0 0 25px rgba(red,1), 0 0 5px rgba(white,0)
+  50%
+    text-shadow: 0 0 25px rgba(red,0), 0 0 5px rgba(white,1)
+  100%
+    text-shadow: 0 0 25px rgba(red,1), 0 0 5px rgba(white,0)
+
+@-webkit-keyframes pulseTextBlue
+  0%
+    text-shadow: 0 0 25px rgba(blue,1), 0 0 5px rgba(white,0)
+  50%
+    text-shadow: 0 0 25px rgba(blue,0), 0 0 5px rgba(white,1)
+  100%
+    text-shadow: 0 0 25px rgba(blue,1), 0 0 5px rgba(white,0)
+
+
+@-webkit-keyframes pulseTextGreenMob
+  0%
+    text-shadow: 0 0 25px rgba(#24ff54,1)
+  50%
+    text-shadow: 0 0 25px rgba(#24ff54,0.3)
+  100%
+    text-shadow: 0 0 25px rgba(#24ff54,1)
+
+@import 'glitch'
+@import 'resume'
+@import 'welcome'
+@import 'button-color-change'
