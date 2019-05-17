@@ -12,7 +12,7 @@ export function welcome(){
                 var chinese = "田由甲申甴电甶男甸甹町画甼甽甾甿畀畁畂畃畄畅畆畇畈畉畊畋界畍畎畏畐畑モク";
                 chinese = chinese.split("");
                 var font_size = 5;
-                var columns = 300;
+                var columns = c.width/font_size + 1;
                 var drops = [];
                 for(var x = 0; x < columns; x++)
                     drops[x] = Math.random()*10000000;
